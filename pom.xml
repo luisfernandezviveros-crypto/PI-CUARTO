@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ═══════════════════════════════════════════════════
+         Coordenadas del proyecto
+    ════════════════════════════════════════════════════════ -->
+    <groupId>com.rentafacil</groupId>
+    <artifactId>RentaFacil</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>RentaFacil</name>
+    <description>Sistema de gestión de renta de vehículos – Proyecto Integrador</description>
+
+    <!-- ═══════════════════════════════════════════════════
+         Propiedades globales
+    ════════════════════════════════════════════════════════ -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <!-- Clase principal de la aplicación -->
+        <main.class>LoginVista.frmlogin</main.class>
+    </properties>
+
+    <!-- ═══════════════════════════════════════════════════
+         Dependencias
+    ════════════════════════════════════════════════════════ -->
+    <dependencies>
+
+        <!-- ── MySQL Connector ────────────────────────────── -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.2.0</version>
+        </dependency>
+
+        <!-- ── JCalendar ──────────────────────────────────── -->
+        <dependency>
+            <groupId>com.toedter</groupId>
+            <artifactId>jcalendar</artifactId>
+            <version>1.4</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/jcalendar-1.4.jar</systemPath>
+        </dependency>
+
+        <!-- ── JGoodies Common ────────────────────────────── -->
+        <dependency>
+            <groupId>com.jgoodies</groupId>
+            <artifactId>jgoodies-common</artifactId>
+            <version>1.2.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/jgoodies-common-1.2.0.jar</systemPath>
+        </dependency>
+
+        <!-- ── JGoodies Looks ─────────────────────────────── -->
+        <dependency>
+            <groupId>com.jgoodies</groupId>
+            <artifactId>jgoodies-looks</artifactId>
+            <version>2.4.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/jgoodies-looks-2.4.1.jar</systemPath>
+        </dependency>
+
+        <!-- ── RSScaleLabel (UI personalizada) ────────────── -->
+        <dependency>
+            <groupId>com.rojerusan</groupId>
+            <artifactId>RSScaleLabel</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/RSScaleLabel.jar</systemPath>
+        </dependency>
+
+        <!-- ── RS Material Components ─────────────────────── -->
+        <dependency>
+            <groupId>com.rojerusan</groupId>
+            <artifactId>RSMaterialComponents</artifactId>
+            <version>3.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/RSMaterialComponents_3.0.jar</systemPath>
+        </dependency>
+
+        <!-- ── RS Button Custom ───────────────────────────── -->
+        <dependency>
+            <groupId>com.rojerusan</groupId>
+            <artifactId>RSButtonCustom</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/RSButtonCustom.jar</systemPath>
+        </dependency>
+
+        <!-- ── RS Notify ──────────────────────────────────── -->
+        <dependency>
+            <groupId>com.rojerusan</groupId>
+            <artifactId>RSNotify</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/RSNotify v1.0.jar</systemPath>
+        </dependency>
+
+        <!-- ── RS Animation ───────────────────────────────── -->
+        <dependency>
+            <groupId>com.rojerusan</groupId>
+            <artifactId>RSAnimation</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/RSAnimation.jar</systemPath>
+        </dependency>
+
+        <!-- ── RS Table Metro ─────────────────────────────── -->
+        <dependency>
+            <groupId>com.rojerusan</groupId>
+            <artifactId>RSTableMetro</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/RSTableMetro.jar</systemPath>
+        </dependency>
+
+        <!-- ── RS Panel Effect ────────────────────────────── -->
+        <dependency>
+            <groupId>com.rojerusan</groupId>
+            <artifactId>RSPanelEffect</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/RSPanelEffect.jar</systemPath>
+        </dependency>
+
+        <!-- ── RS Progress Bar ────────────────────────────── -->
+        <dependency>
+            <groupId>com.rojerusan</groupId>
+            <artifactId>RSProgressBar</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/RSProgressBar.jar</systemPath>
+        </dependency>
+
+        <!-- ── RS Date ────────────────────────────────────── -->
+        <dependency>
+            <groupId>com.rojerusan</groupId>
+            <artifactId>RSDate</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/RSDate.jar</systemPath>
+        </dependency>
+
+        <!-- ── RS Foto ────────────────────────────────────── -->
+        <dependency>
+            <groupId>com.rojerusan</groupId>
+            <artifactId>RSFoto</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/RSFoto_v1.0.jar</systemPath>
+        </dependency>
+
+        <!-- ── RojeruSan Full (librería completa) ─────────── -->
+        <dependency>
+            <groupId>com.rojerusan</groupId>
+            <artifactId>RojeruSan-full</artifactId>
+            <version>9.6</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/RojeruSan.full_9.6.jar</systemPath>
+        </dependency>
+
+        <!-- ── JUnit 4 ────────────────────────────────────── -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <!-- ═══════════════════════════════════════════════════
+         Repositorio central (para mysql-connector-j y junit)
+    ════════════════════════════════════════════════════════ -->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
+    <!-- ═══════════════════════════════════════════════════
+         Plugins de construcción
+    ════════════════════════════════════════════════════════ -->
+    <build>
+
+        <!-- Directorio de fuentes principal -->
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
+
+        <!-- Incluir recursos (imágenes, etc.) -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+
+        <plugins>
+
+            <!-- ── Compilador Java ──────────────────────── -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+
+            <!-- ── JAR ejecutable con todas las dependencias ── -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.7.1</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>${main.class}</mainClass>
+                        </manifest>
+                    </archive>
+                    <finalName>RentaFacil</finalName>
+                    <appendAssemblyId>false</appendAssemblyId>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- ── Recursos (copia libs al target) ────────── -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
