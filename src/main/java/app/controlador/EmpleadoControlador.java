@@ -1,11 +1,12 @@
 package app.controlador;
 
-import app.dao.EmpleadoDAO;
-import app.dao.ConexionBD;
-import app.modelo.Empleado;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
+
+import app.dao.ConexionBD;
+import app.dao.EmpleadoDAO;
+import app.modelo.Empleado;
 
 public class EmpleadoControlador {
     
@@ -27,14 +28,14 @@ public class EmpleadoControlador {
             empleadoDao.insertar(nuevoEmpleado, conexion);
 
             conexion.commit(); // Confirmar transacción
-            System.out.println("✅ Empleado con ID " + nuevoEmpleado.getIdUsuario() + " registrado correctamente.");
+            System.out.println(" Empleado con ID " + nuevoEmpleado.getIdUsuario() + " registrado correctamente.");
             return true;
         } catch (SQLException e) {
-            System.err.println("❌ Error SQL al registrar empleado: " + e.getMessage());
+            System.err.println(" Error SQL al registrar empleado: " + e.getMessage());
             if (conexion != null) {
                 try { conexion.rollback(); } 
                 catch (SQLException ex) { 
-                    System.err.println("⚠️ Error al hacer rollback: " + ex.getMessage()); 
+                    System.err.println(" Error al hacer rollback: " + ex.getMessage()); 
                 }
             }
             return false;
@@ -44,7 +45,7 @@ public class EmpleadoControlador {
                     conexion.setAutoCommit(true);
                     conexion.close();
                 } catch (SQLException e) {
-                    System.err.println("⚠️ Error al cerrar conexión: " + e.getMessage());
+                    System.err.println(" Error al cerrar conexión: " + e.getMessage());
                 }
             }
         }
@@ -62,14 +63,14 @@ public class EmpleadoControlador {
             empleadoDao.actualizar(empleadoActualizado, conexion);
 
             conexion.commit();
-            System.out.println("✅ Empleado con ID " + empleadoActualizado.getIdUsuario() + " actualizado correctamente.");
+            System.out.println(" Empleado con ID " + empleadoActualizado.getIdUsuario() + " actualizado correctamente.");
             return true;
         } catch (SQLException e) {
-            System.err.println("❌ Error SQL al actualizar empleado: " + e.getMessage());
+            System.err.println("Error SQL al actualizar empleado: " + e.getMessage());
             if (conexion != null) {
                 try { conexion.rollback(); } 
                 catch (SQLException ex) { 
-                    System.err.println("⚠️ Error al hacer rollback: " + ex.getMessage()); 
+                    System.err.println(" Error al hacer rollback: " + ex.getMessage()); 
                 }
             }
             return false;
@@ -79,7 +80,7 @@ public class EmpleadoControlador {
                     conexion.setAutoCommit(true);
                     conexion.close();
                 } catch (SQLException e) {
-                    System.err.println("⚠️ Error al cerrar conexión: " + e.getMessage());
+                    System.err.println(" Error al cerrar conexión: " + e.getMessage());
                 }
             }
         }
@@ -97,14 +98,14 @@ public class EmpleadoControlador {
             empleadoDao.eliminar(idUsuario, conexion);
 
             conexion.commit();
-            System.out.println("✅ Empleado con ID " + idUsuario + " eliminado correctamente.");
+            System.out.println(" Empleado con ID " + idUsuario + " eliminado correctamente.");
             return true;
         } catch (SQLException e) {
-            System.err.println("❌ Error SQL al eliminar empleado: " + e.getMessage());
+            System.err.println(" Error SQL al eliminar empleado: " + e.getMessage());
             if (conexion != null) {
                 try { conexion.rollback(); } 
                 catch (SQLException ex) { 
-                    System.err.println("⚠️ Error al hacer rollback: " + ex.getMessage()); 
+                    System.err.println(" Error al hacer rollback: " + ex.getMessage()); 
                 }
             }
             return false;
@@ -114,7 +115,7 @@ public class EmpleadoControlador {
                     conexion.setAutoCommit(true);
                     conexion.close();
                 } catch (SQLException e) {
-                    System.err.println("⚠️ Error al cerrar conexión: " + e.getMessage());
+                    System.err.println(" Error al cerrar conexión: " + e.getMessage());
                 }
             }
         }
@@ -129,13 +130,13 @@ public class EmpleadoControlador {
             conexion = ConexionBD.obtenerConexion();
             return empleadoDao.obtenerEmpleadoPorId(idUsuario, conexion);
         } catch (SQLException e) {
-            System.err.println("❌ Error SQL al obtener empleado por ID: " + e.getMessage());
+            System.err.println(" Error SQL al obtener empleado por ID: " + e.getMessage());
             return null;
         } finally {
             if (conexion != null) {
                 try { conexion.close(); } 
                 catch (SQLException e) { 
-                    System.err.println("⚠️ Error al cerrar conexión: " + e.getMessage()); 
+                    System.err.println(" Error al cerrar conexión: " + e.getMessage()); 
                 }
             }
         }
