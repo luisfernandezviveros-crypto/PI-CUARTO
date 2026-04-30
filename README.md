@@ -10,3 +10,6 @@ RentaFácil es un sistema de información web diseñado para transformar la gest
 - Gisela Andrade Murillo
 - Michelle Dayanna Duque Marín
 - Ana Yiseth Solarte
+
+# GRUPO 
+- 411
