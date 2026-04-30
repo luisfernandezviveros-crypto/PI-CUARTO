@@ -233,6 +233,8 @@ src/
 │   │       ├── VistaReserva.java
 │   │       └── VistaVehiculo.java
 
+```
+
 ---
 
 ## Conexión a la base de datos
