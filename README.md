@@ -61,7 +61,7 @@ Atributos:
 
 ---
 
-### actura
+### Factura
 Representa el registro del cobro generado por un servicio de alquiler.
 
 Atributos:
