@@ -195,27 +195,43 @@ El proyecto está organizado bajo una arquitectura por capas:
 ```text
 src/
 │
-├── modelo/
-│   ├── Usuario.java
-│   ├── Vehiculo.java
-│   ├── Reserva.java
-│   ├── Factura.java
-│   ├── Pago.java
-│
-├── controlador/
-│   ├── ControladorUsuario.java
-│   ├── ControladorReserva.java
-│   ├── ControladorVehiculo.java
-│
-├── vista/
-│   ├── VistaLogin.java
-│   ├── VistaMenu.java
-│
-├── util/
-│   ├── ConexionBD.java
-│
-└── Main.java
-```
+├── main/
+│   ├── java/
+│   │   ├── app/
+│   │   │
+│   │   ├── controlador/
+│   │   │   ├── AutenticacionControlador.java
+│   │   │   ├── ClienteControlador.java
+│   │   │   ├── EmpleadoControlador.java
+│   │   │   ├── EstadisticaControlador.java
+│   │   │   ├── ReporteControlador.java
+│   │   │   ├── ReservaControlador.java
+│   │   │   └── VehiculoControlador.java
+│   │   │
+│   │   ├── dao/
+│   │   │   ├── ClienteDAO.java
+│   │   │   ├── ConexionBD.java
+│   │   │   ├── EmpleadoDAO.java
+│   │   │   ├── EstadisticaDAO.java
+│   │   │   ├── ReporteDAO.java
+│   │   │   ├── ReservaDAO.java
+│   │   │   └── VehiculoDAO.java
+│   │   │
+│   │   ├── modelo/
+│   │   │   ├── Cliente.java
+│   │   │   ├── Empleado.java
+│   │   │   ├── Reporte.java
+│   │   │   ├── Reserva.java
+│   │   │   ├── Usuario.java
+│   │   │   └── Vehiculo.java
+│   │   │
+│   │   └── vista/
+│   │       ├── MenuPrincipal.java
+│   │       ├── VistaCliente.java
+│   │       ├── VistaEmpleado.java
+│   │       ├── VistaReporte.java
+│   │       ├── VistaReserva.java
+│   │       └── VistaVehiculo.java
 
 ---
 
