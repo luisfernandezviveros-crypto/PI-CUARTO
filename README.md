@@ -1,9 +1,9 @@
-# RENTA FACIL
+# RENTAFÁCIL
 
 
 ## Sistema de gestión de renta de vehículos - proyecto integrador
 
-RentaFácil es un sistema de información web diseñado para transformar la gestión de alquiler de vehículos en Cali, pasando de procesos manuales propensos a errores hacia una administración digital integrada El proyecto se enfoca en resolver la falta de control en la disponibilidad de flota y las dificultades en la generación de cotizaciones y facturas mediante una herramienta robusta y escalable.
+RentaFácil es un sistema de información web diseñado para transformar la gestión de alquiler de vehículos en Cali, pasando de procesos manuales propensos a errores hacia una administración digital integrada. El proyecto se enfoca en resolver la falta de control en la disponibilidad de flota y las dificultades en la generación de cotizaciones y facturas mediante una herramienta robusta y escalable.
 
 ---
 
@@ -95,7 +95,7 @@ Atributos:
 
 ---
 
-### Accesorios (Opcional)
+### Accesorios 
 Permite gestionar los accesorios asociados a los vehículos.
 
 Atributos:
@@ -181,7 +181,7 @@ Usuario "1" --> "0..*" Cotizacion : solicita
 
 - **Lenguaje de programación:** Javascript
 - **Base de datos:** MySQL
-- **Gestor de base de datos:** MySQL Workbench
+- **Gestor de base de datos:** MySQL, Workbench
 - **Control de versiones:** Git y GitHub
 - **Metodología:** Prototipado
 
